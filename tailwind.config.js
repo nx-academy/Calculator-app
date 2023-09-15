@@ -22,7 +22,9 @@ module.exports = {
     colors: {
       fiord: FIORD,
       ebonyClay: EBONY_CLAY,
-      mirage: MIRAGE
+      mirage: MIRAGE,
+      riverBed: RIVER_BED,
+      white: WHITE
     }
   },
   plugins: [],

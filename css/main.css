@@ -4,11 +4,11 @@
 
 @layer components {
   .key-primary {
-    @apply bg-pearlBush rounded-sm h-16 w-16 flex justify-center items-center text-2xl font-bold border-b-4 border-solid border-b-napa;
+    @apply bg-pearlBush rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-2xl font-bold border-b-4 border-solid border-b-napa;
   }
 
   .key-secondary {
-    @apply bg-lynch text-white rounded-sm h-16 w-16 flex justify-center items-center text-xl font-bold border-b-4 border-solid border-b-eastBay;
+    @apply bg-lynch text-white rounded-sm h-16 w-16 lg:w-auto flex justify-center items-center text-xl font-bold border-b-4 border-solid border-b-eastBay;
   }
 
   .key-tertiary {

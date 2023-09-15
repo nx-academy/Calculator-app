@@ -33,12 +33,12 @@ function handleKeyOperator(): void {
 
   $operators.forEach(($operator) => {
     $operator.addEventListener("click", function () {
-        const $result = document.querySelector('.result')
-        const operatorOperation = $operator.getAttribute('data-value')
+      const $result = document.querySelector(".result");
+      const operatorOperation = $operator.getAttribute("data-value");
 
-        console.log(operatorOperation)
+      console.log(operatorOperation);
 
-        $result.textContent = "0"
+      $result.textContent = "0";
     });
   });
 }

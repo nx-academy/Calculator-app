@@ -23,6 +23,12 @@ module.exports = {
       fiord: FIORD,
       ebonyClay: EBONY_CLAY,
       mirage: MIRAGE,
+      lynch: LYNCH,
+      eastBay: EAST_BAY,
+      persianRed: PERSIAN_RED,
+      oldBrick: OLD_BRICK,
+      pearlBush: PEARL_BUSH,
+      napa: NAPA,
       riverBed: RIVER_BED,
       white: WHITE
     }

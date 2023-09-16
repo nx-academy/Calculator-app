@@ -1,10 +1,12 @@
 {
   "scripts": {
     "watch-css": "npx tailwindcss -i ./css/main.css -o ./dist/main.css --watch",
-    "watch-ts": "tsc --watch"
+    "watch-ts": "tsc --watch",
+    "watch-test": "vitest --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.4"
   }
 }

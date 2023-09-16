@@ -6,26 +6,34 @@ const store: Store = {
   operations: []
 }
 
-function handleCalculation(operations: string[]) {
+function handleCalculation(operations: string[]): number {
   const re = /^[+\-x\/]+$/;
   const operation = operations.find(operation => re.test(operation))
+
+  let total = 0
 
   switch(operation) {
     case '+':
       console.log("Make sum")
+      total = Number(operations[0]) + Number(operations[2])
       break
     case '-':
       console.log("Make sub")
+      total = Number(operations[0]) - Number(operations[2])
       break
     case '/':
       console.log("Make division")
+      total = Number(operations[0]) / Number(operations[2])
       break
     case 'x':
       console.log("Make multiplication")
+      total = Number(operations[0]) * Number(operations[2])
       break
     default:
       throw new Error("Unknown operation")
   }
+
+  return total
 }
 
 function handleReset(): void {
@@ -64,17 +72,20 @@ function handleKeyOperator(): void {
       const $result = document.querySelector(".result");
       const operation = $operator.getAttribute("data-value");
 
+      let result = 0
+
       store.operations.push($result.textContent)
 
       if (operation === "=") {
-        console.log(store.operations)
-        handleCalculation(store.operations)
+        const calculation = handleCalculation(store.operations)
+        store.operations = []
+        result = calculation
       } else {
         store.operations.push(operation)
+        result = 0
       }
 
-
-      $result.textContent = "0";
+      $result.textContent = String(result)
     });
   });
 }

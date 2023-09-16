@@ -1,3 +1,5 @@
+import handleCalculation from './handleCalculation'
+
 type Store = {
   operations: string[]
 }

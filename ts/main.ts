@@ -1,29 +1,38 @@
 type Store = {
-  operations: string[],
-  resetOperations: Function,
-  calculate:  Function
+  operations: string[]
 }
 
 const store: Store = {
-  operations: [],
-  resetOperations: function() {
-    this.operations = []
-  },
-  calculate: function() {
-    let total = 0
-    const re = /^[+\-x\/]+$/
-    this.operations.forEach((operation: string) => {
-      console.log(re.test(operation))
-    })
+  operations: []
+}
+
+function handleCalculation(operations: string[]) {
+  const re = /^[+\-x\/]+$/;
+  const operation = operations.find(operation => re.test(operation))
+
+  switch(operation) {
+    case '+':
+      console.log("Make sum")
+      break
+    case '-':
+      console.log("Make sub")
+      break
+    case '/':
+      console.log("Make division")
+      break
+    case 'x':
+      console.log("Make multiplication")
+      break
+    default:
+      throw new Error("Unknown operation")
   }
-};
+}
 
 function handleReset(): void {
   const $resetBtn = document.querySelector(".reset-btn");
 
   $resetBtn.addEventListener("click", function () {
     const $result = document.querySelector(".result");
-    store.resetOperations()
     $result.textContent = "0";
   });
 }
@@ -59,7 +68,7 @@ function handleKeyOperator(): void {
 
       if (operation === "=") {
         console.log(store.operations)
-        store.calculate()
+        handleCalculation(store.operations)
       } else {
         store.operations.push(operation)
       }

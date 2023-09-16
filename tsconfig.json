@@ -2,7 +2,8 @@
     "compilerOptions": {
         "noImplicitAny": true,
         "removeComments": true,
-        "outDir": "./dist/"
+        "outDir": "./dist/",
+        "target": "ES2015"
     },
     "include": ["./ts/"]
 }

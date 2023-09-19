@@ -13,6 +13,26 @@ describe('handleCalculation Unit Test Suites', () => {
         const operations = ["1", "+", "2"]
         expect(typeof handleCalculation(operations)).toBe('number')
     })
+
+    it('should make a sum', () => {
+        const operations = ["1", "+", "2"]
+        expect(handleCalculation(operations)).toEqual(3)
+    })
+
+    it('should make a substraction', () => {
+        const operations = ["4", "-", "1"]
+        expect(handleCalculation(operations)).toEqual(3)
+    })
+
+    it('should make a division', () => {
+        const operations = ["10", "/", "2"]
+        expect(handleCalculation(operations)).toEqual(5)
+    })
+
+    it('should make a multiplication', () => {
+        const operations = ["10", "x", "2"]
+        expect(handleCalculation(operations)).toEqual(20)
+    })
 })
 
 

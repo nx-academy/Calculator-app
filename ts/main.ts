@@ -1,13 +1,5 @@
 import handleCalculation from './handleCalculation.js'
-
-type Store = {
-  operations: string[]
-}
-
-const store: Store = {
-  operations: []
-}
-
+import { store } from './handleStore.js'
 
 function handleReset(): void {
   const $resetBtn = document.querySelector(".reset-btn");

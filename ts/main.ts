@@ -1,4 +1,4 @@
-import handleCalculation from './handleCalculation'
+import handleCalculation from './handleCalculation.js'
 
 type Store = {
   operations: string[]
@@ -73,4 +73,4 @@ function main(): void {
   handleKeyOperator();
 }
 
-main();
+export default main

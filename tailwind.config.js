@@ -30,7 +30,7 @@ module.exports = {
       pearlBush: PEARL_BUSH,
       napa: NAPA,
       riverBed: RIVER_BED,
-      white: WHITE
+      white: WHITE,
     }
   },
   plugins: [],

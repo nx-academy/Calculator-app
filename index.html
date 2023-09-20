@@ -21,7 +21,17 @@
     <main class="py-8 px-5 lg:w-2/5 mx-auto max-w-xl">
       <header class="text-white mb-8 flex flex-row">
         <h1 class="text-4xl font-bold">calc</h1>
-        <div class="ml-auto">Theme</div>
+        <div class="ml-auto">
+          <div class="tw-toggle">
+              <input class="tw-toggle-input" type="radio" id="theme-1" name="theme" value="theme-1" />
+              <label class="tw-toggle-label" for="theme-1">1</label>
+              <input class="tw-toggle-input" type="radio" id="theme-2" name="theme" value="theme-2" />
+              <label class="tw-toggle-label" for="theme-2">2</label>
+              <input class="tw-toggle-input" type="radio" id="theme-3" name="theme" value="theme-3" />
+              <label class="tw-toggle-label" for="theme-3">3</label>
+              <span class="tw-toggle-span"></span>
+          </div>
+        </div>
       </header>
       <section class="text-white mb-8 bg-mirage p-5">
         <h2 class="text-right text-4xl font-bold result">0</h2>

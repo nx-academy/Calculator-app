@@ -20,6 +20,18 @@
   .key-tertiary {
     @apply col-span-2 h-16 flex justify-center items-center text-xl font-bold text-white border-b-4 border-solid rounded-md cursor-pointer;
   }
+
+  .tw-toggle {
+    @apply inline-block px-2 py-1 rounded-xl relative bg-mirage;
+  }
+
+  .tw-toggle-label {
+    @apply text-center inline-block text-white relative z-10 px-2 py-1;
+  }
+
+  .tw-toggle-input {
+    @apply absolute z-20 opacity-0 cursor-pointer;
+  }
 }
 
 @layer base {
@@ -27,3 +39,4 @@
     font-family: "League Spartan", sans-serif;
   }
 }
+

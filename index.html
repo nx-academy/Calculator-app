@@ -1,53 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link href="/dist/main.css" rel="stylesheet" />
-</head>
-<body class="bg-fiord min-h-screen flex justify-center items-center">
-  <main class="py-8 px-5 lg:w-2/5 mx-auto max-w-xl">
-    <header class="text-white mb-8 flex flex-row">
-      <h1 class="text-4xl font-bold">calc</h1>
-      <div class="ml-auto">
-        Theme
-      </div>
-    </header>
-    <section class="text-white mb-8 bg-mirage p-5">
-      <h2 class="text-right text-3xl font-bold result">0</h2>
-    </section>
-    <section class="bg-ebonyClay p-5 rounded-lg">
-      <ul class="text-riverBed grid grid-cols-4 gap-4 text-center">
-        <li class="key key-primary" data-value="7">7</li>
-        <li class="key key-primary" data-value="8">8</li>
-        <li class="key key-primary" data-value="9">9</li>
-        <li class="del-btn key-secondary">DEL</li>
-        <li class="key key-primary" data-value="4">4</li>
-        <li class="key key-primary" data-value="5">5</li>
-        <li class="key key-primary" data-value="6">6</li>
-        <li class="operator key-primary" data-value="+">+</li>
-        <li class="key key-primary" data-value="1">1</li>
-        <li class="key key-primary" data-value="2">2</li>
-        <li class="key key-primary" data-value="3">3</li>
-        <li class="operator key-primary" data-value="-">-</li>
-        <li class="key-primary">.</li>
-        <li class="key key-primary" data-value="0">0</li>
-        <li class="operator key-primary" data-value="/">/</li>
-        <li class="operator key-primary" data-value="x">x</li>
-        <li class="reset-btn key-tertiary bg-lynch border-b-eastBay uppercase">Reset</li>
-        <li class="operator key-tertiary bg-persianRed border-b-oldBrick" data-value="=">=</li>
-      </ul>
-    </section>
-  </main>
-  <script type="module">
-    import main from '/dist/main.js'
-    main()
-  </script>
-</body>
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link href="/dist/main.css" rel="stylesheet" />
+  </head>
+  <body class="bg-fiord min-h-screen flex justify-center items-center">
+    <main class="py-8 px-5 lg:w-2/5 mx-auto max-w-xl">
+      <header class="text-white mb-8 flex flex-row">
+        <h1 class="text-4xl font-bold">calc</h1>
+        <div class="ml-auto">Theme</div>
+      </header>
+      <section class="text-white mb-8 bg-mirage p-5">
+        <h2 class="text-right text-4xl font-bold result">0</h2>
+      </section>
+      <section class="bg-ebonyClay p-5 rounded-lg">
+        <ul class="text-riverBed grid grid-cols-4 gap-4 text-center">
+          <li class="key key-primary" data-value="7">7</li>
+          <li class="key key-primary" data-value="8">8</li>
+          <li class="key key-primary" data-value="9">9</li>
+          <li class="del-btn key-secondary">DEL</li>
+          <li class="key key-primary" data-value="4">4</li>
+          <li class="key key-primary" data-value="5">5</li>
+          <li class="key key-primary" data-value="6">6</li>
+          <li class="operator key-primary" data-value="+">+</li>
+          <li class="key key-primary" data-value="1">1</li>
+          <li class="key key-primary" data-value="2">2</li>
+          <li class="key key-primary" data-value="3">3</li>
+          <li class="operator key-primary" data-value="-">-</li>
+          <li class="key-primary">.</li>
+          <li class="key key-primary" data-value="0">0</li>
+          <li class="operator key-primary" data-value="/">/</li>
+          <li class="operator key-primary" data-value="x">x</li>
+          <li
+            class="reset-btn key-tertiary bg-lynch border-b-eastBay uppercase"
+          >
+            Reset
+          </li>
+          <li
+            class="operator key-tertiary bg-persianRed border-b-oldBrick"
+            data-value="="
+          >
+            =
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script type="module">
+      import main from "/dist/main.js";
+      main();
+    </script>
+  </body>
 </html>

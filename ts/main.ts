@@ -14,6 +14,15 @@ function handleReset(): void {
   });
 }
 
+function handleDeleteButton(): void {
+  const $delBtn = document.querySelector(".del-btn");
+
+  $delBtn.addEventListener("click", function () {
+    const $result = document.querySelector(".result");
+    $result.textContent = "0";
+  });
+}
+
 function handleKeyNumber(): void {
   const $keysNumber = document.querySelectorAll(".key");
 
@@ -57,6 +66,7 @@ function handleKeyOperator(): void {
 
 function main(): void {
   handleReset();
+  handleDeleteButton();
   handleKeyNumber();
   handleKeyOperator();
 }

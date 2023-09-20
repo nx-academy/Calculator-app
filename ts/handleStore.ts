@@ -22,6 +22,7 @@ function updateStore(store: Store, operation: string): Store {
 
 export {
     store,
+    Store,
     updateStore,
     createStore
 }

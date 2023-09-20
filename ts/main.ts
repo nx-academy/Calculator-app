@@ -1,5 +1,5 @@
 import handleCalculation from './handleCalculation.js'
-import { createStore } from './handleStore.js'
+import { createStore, updateStore } from './handleStore.js'
 import { handleKeyTyping } from './handleKeyTyping.js'
 
 let store = createStore()
@@ -37,22 +37,18 @@ function handleKeyOperator(): void {
       const $result = document.querySelector(".result");
       const operation = $operator.getAttribute("data-value");
 
-      let result = 0
+      let result: Number 
 
-      store.operations.push($result.textContent)
+      store = updateStore(store, $result.textContent)
 
       if (operation === "=") {
         const calculation = handleCalculation(store.operations)
-        store.operations = []
+        store = createStore()
         result = calculation
       } else {
-        store.operations.push(operation)
+        store = updateStore(store, operation)
         result = 0
       }
-
-      console.log("=====")
-      console.log(store.operations)
-      console.log("=====")
 
       $result.textContent = String(result)
     });

@@ -1,11 +1,15 @@
 import handleCalculation from './handleCalculation.js'
-import { store } from './handleStore.js'
+import { createStore } from './handleStore.js'
+import { handleKeyTyping } from './handleKeyTyping.js'
+
+let store = createStore()
 
 function handleReset(): void {
   const $resetBtn = document.querySelector(".reset-btn");
 
   $resetBtn.addEventListener("click", function () {
     const $result = document.querySelector(".result");
+    store = createStore()
     $result.textContent = "0";
   });
 }
@@ -16,15 +20,11 @@ function handleKeyNumber(): void {
   $keysNumber.forEach(($keyNumber) =>
     $keyNumber.addEventListener("click", function () {
       const $result = document.querySelector(".result");
+
       let currentResult = $result.textContent;
+      const keyNumberContent = $keyNumber.textContent
 
-      if (currentResult === "0") {
-        currentResult = $keyNumber.textContent;
-      } else {
-        currentResult = currentResult + $keyNumber.textContent;
-      }
-
-      $result.textContent = currentResult;
+      $result.textContent = handleKeyTyping(currentResult, keyNumberContent);
     })
   );
 }

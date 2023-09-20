@@ -1,15 +1,15 @@
-import handleCalculation from './handleCalculation.js'
-import { createStore, updateStore } from './handleStore.js'
-import { handleKeyTyping } from './handleKeyTyping.js'
+import handleCalculation from "./handleCalculation.js";
+import { createStore, updateStore } from "./handleStore.js";
+import { handleKeyTyping } from "./handleKeyTyping.js";
 
-let store = createStore()
+let store = createStore();
 
 function handleReset(): void {
   const $resetBtn = document.querySelector(".reset-btn");
 
   $resetBtn.addEventListener("click", function () {
     const $result = document.querySelector(".result");
-    store = createStore()
+    store = createStore();
     $result.textContent = "0";
   });
 }
@@ -22,10 +22,10 @@ function handleKeyNumber(): void {
       const $result = document.querySelector(".result");
 
       let currentResult = $result.textContent;
-      const keyNumberContent = $keyNumber.textContent
+      const keyNumberContent = $keyNumber.textContent;
 
       $result.textContent = handleKeyTyping(currentResult, keyNumberContent);
-    })
+    }),
   );
 }
 
@@ -37,20 +37,20 @@ function handleKeyOperator(): void {
       const $result = document.querySelector(".result");
       const operation = $operator.getAttribute("data-value");
 
-      let result: Number 
+      let result: Number;
 
-      store = updateStore(store, $result.textContent)
+      store = updateStore(store, $result.textContent);
 
       if (operation === "=") {
-        const calculation = handleCalculation(store.operations)
-        store = createStore()
-        result = calculation
+        const calculation = handleCalculation(store.operations);
+        store = createStore();
+        result = calculation;
       } else {
-        store = updateStore(store, operation)
-        result = 0
+        store = updateStore(store, operation);
+        result = 0;
       }
 
-      $result.textContent = String(result)
+      $result.textContent = String(result);
     });
   });
 }
@@ -61,4 +61,4 @@ function main(): void {
   handleKeyOperator();
 }
 
-export default main
+export default main;

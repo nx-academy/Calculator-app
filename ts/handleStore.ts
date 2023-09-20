@@ -1,28 +1,19 @@
 type Store = {
-  operations: string[]
-}
-
-const store: Store = {
-  operations: []
-}
+  operations: string[];
+};
 
 function createStore(): Store {
-    return {
-        operations: []
-    }
+  return {
+    operations: [],
+  };
 }
 
 function updateStore(store: Store, operation: string): Store {
-    const newStore = {
-        operations: [...store.operations, operation]
-    }
+  const newStore = {
+    operations: [...store.operations, operation],
+  };
 
-    return newStore
+  return newStore;
 }
 
-export {
-    store,
-    Store,
-    updateStore,
-    createStore
-}
+export { Store, updateStore, createStore };

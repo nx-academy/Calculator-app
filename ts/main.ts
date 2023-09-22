@@ -4,6 +4,16 @@ import { handleKeyTyping } from "./handleKeyTyping.js";
 
 let store = createStore();
 
+function handleTheme(): void {
+  const $themeCheckboxes = document.querySelectorAll('.tw-toggle-input')
+
+  $themeCheckboxes.forEach($checkbox => {
+    $checkbox.addEventListener('change', function() {
+      alert('foo')
+    })
+  })
+}
+
 function handleReset(): void {
   const $resetBtn = document.querySelector(".reset-btn");
 
@@ -65,6 +75,7 @@ function handleKeyOperator(): void {
 }
 
 function main(): void {
+  handleTheme()
   handleReset();
   handleDeleteButton();
   handleKeyNumber();

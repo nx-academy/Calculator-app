@@ -32,7 +32,7 @@
   }
 
   .tw-toggle-label {
-    @apply text-center text-white z-10 px-2 py-1 absolute -top-7;
+    @apply text-center text-white z-10 px-2 py-1 absolute -top-7 cursor-pointer text-sm;
   }
 
   .tw-toggle-label[for="theme-1"] {
@@ -44,15 +44,15 @@
   }
 
   .tw-toggle-label[for="theme-3"] {
-    @apply right-[65px];
+    @apply left-[65px];
   }
 
   .tw-toggle-input {
-    @apply absolute z-20 opacity-0 cursor-pointer;
+    @apply absolute z-20 opacity-0;
   }
 
   .tw-toggle-span {
-    @apply h-6 w-6 bg-white absolute left-0 top-0 ease-in-out duration-300 rounded-full;
+    @apply h-6 w-6 bg-white absolute left-0 top-[2px] ease-in-out duration-300 rounded-full;
   }
 
   .tw-toggle-input[value="theme-1"]:checked ~ .tw-toggle-span {
@@ -60,10 +60,10 @@
   }
 
   .tw-toggle-input[value="theme-2"]:checked ~ .tw-toggle-span {
-    @apply bg-persianRed left-6;
+    @apply bg-persianRed left-[35px];
   }
 
   .tw-toggle-input[value="theme-3"]:checked ~ .tw-toggle-span {
-    @apply bg-persianRed left-12;
+    @apply bg-persianRed left-[64px];
   }
 }

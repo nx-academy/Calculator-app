@@ -28,11 +28,23 @@
   }
 
   .tw-toggle {
-    @apply inline-block px-2 py-1 rounded-xl relative bg-mirage;
+    @apply inline-block px-2 py-1 rounded-xl relative bg-mirage w-24 h-7;
   }
 
   .tw-toggle-label {
-    @apply text-center inline-block text-white relative z-10 px-2 py-1;
+    @apply text-center text-white z-10 px-2 py-1 absolute -top-7;
+  }
+
+  .tw-toggle-label[for="theme-1"] {
+    @apply left-[8px];
+  }
+
+  .tw-toggle-label[for="theme-2"] {
+    @apply left-[36px];
+  }
+
+  .tw-toggle-label[for="theme-3"] {
+    @apply right-[65px];
   }
 
   .tw-toggle-input {
@@ -40,18 +52,18 @@
   }
 
   .tw-toggle-span {
-    @apply h-6 w-6 bg-white absolute left-0 top-0 ease-in-out duration-300;
+    @apply h-6 w-6 bg-white absolute left-0 top-0 ease-in-out duration-300 rounded-full;
   }
 
   .tw-toggle-input[value="theme-1"]:checked ~ .tw-toggle-span {
-    @apply bg-persianRed left-0 text-white;
+    @apply bg-persianRed left-[7px];
   }
 
   .tw-toggle-input[value="theme-2"]:checked ~ .tw-toggle-span {
-    @apply bg-persianRed left-6 text-white;
+    @apply bg-persianRed left-6;
   }
 
   .tw-toggle-input[value="theme-3"]:checked ~ .tw-toggle-span {
-    @apply bg-persianRed left-12 text-white;
+    @apply bg-persianRed left-12;
   }
 }

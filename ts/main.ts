@@ -10,12 +10,12 @@ function handleTheme(): void {
   $themeCheckboxes.forEach($checkbox => {
     $checkbox.addEventListener('change', function(e) {
       const value = (e.target as HTMLInputElement).value
-      const $body = document.querySelector('body')
+      const $html = document.querySelector('html')
       
-      $body.classList.remove('theme-1')
-      $body.classList.remove('theme-2')
-      $body.classList.remove('theme-3')
-      $body.classList.add(value)
+      $html.classList.remove('theme-1')
+      $html.classList.remove('theme-2')
+      $html.classList.remove('theme-3')
+      $html.classList.add(value)
     })
   })
 }

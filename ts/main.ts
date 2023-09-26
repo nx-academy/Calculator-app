@@ -8,8 +8,14 @@ function handleTheme(): void {
   const $themeCheckboxes = document.querySelectorAll('.tw-toggle-input')
 
   $themeCheckboxes.forEach($checkbox => {
-    $checkbox.addEventListener('change', function() {
-      alert('foo')
+    $checkbox.addEventListener('change', function(e) {
+      const value = (e.target as HTMLInputElement).value
+      const $body = document.querySelector('body')
+      
+      $body.classList.remove('theme-1')
+      $body.classList.remove('theme-2')
+      $body.classList.remove('theme-3')
+      $body.classList.add(value)
     })
   })
 }

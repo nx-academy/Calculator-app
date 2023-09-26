@@ -20,6 +20,65 @@ const RIVER_BED = "#444B5A";
 const WHITE = "#FFF";
 
 // Functional color variables
+const theme1 = {
+  bg: {
+    primary: "hsl(222, 26%, 31%)",
+    secondary: "hsl(223, 31%, 20%)",
+    tertiary: "hsl(224, 36%, 15%)",
+  },
+  keys: {
+    primary: "hsl(225, 21%, 49%)",
+    primaryShadow: "hsl(224, 28%, 35%)",
+    secondary: "hsl(6, 63%, 50%)",
+    secondaryShadow: "hsl(6, 70%, 34%)",
+    tertiary: "hsl(30, 25%, 89%)",
+    tertiaryShadow: "hsl(28, 16%, 65%)",
+  },
+  text: {
+    primary: "hsl(221, 14%, 31%)",
+    secondary: "hsl(0, 0%, 100%)",
+  },
+};
+
+const theme2 = {
+  bg: {
+    primary: "hsl(0, 0%, 90%)",
+    secondary: "hsl(0, 5%, 81%)",
+    tertiary: "hsl(0, 0%, 93%)",
+  },
+  keys: {
+    primary: "hsl(185, 42%, 37%)",
+    primaryShadow: "hsl(185, 58%, 25%)",
+    secondary: "hsl(25, 98%, 40%)",
+    secondaryShadow: "hsl(25, 99%, 27%)",
+    tertiary: "hsl(45, 7%, 89%)",
+    tertiaryShadow: "hsl(35, 11%, 61%)",
+  },
+  text: {
+    primary: "hsl(60, 10%, 19%)",
+    secondary: "hsl(0, 0%, 100%)",
+  },
+};
+
+const theme3 = {
+  bg: {
+    primary: "hsl(268, 75%, 9%)",
+    secondary: "hsl(268, 71%, 12%)",
+    tertiary: "hsl(268, 71%, 12%)",
+  },
+  keys: {
+    primary: "hsl(281, 89%, 26%)",
+    primaryShadow: "hsl(285, 91%, 52%)",
+    secondary: "hsl(176, 100%, 44%)",
+    secondaryShadow: "hsl(177, 92%, 70%)",
+    tertiary: "hsl(268, 47%, 21%)",
+    tertiaryShadow: "hsl(290, 70%, 36%)",
+  },
+  text: {
+    primary: "hsl(52, 100%, 62%",
+    secondary: "hsl(0, 0%, 100%)",
+  },
+};
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -28,8 +87,22 @@ module.exports = {
   plugins: [
     createThemes({
       "theme-1": {
-        fiord: FIORD,
-        background: FIORD,
+        "bg-primary": theme1.bg.primary,
+        "bg-secondary": theme1.bg.secondary,
+        "bg-tertiary": theme1.bg.tertiary,
+        lynch: LYNCH,
+        eastBay: EAST_BAY,
+        persianRed: PERSIAN_RED,
+        oldBrick: OLD_BRICK,
+        pearlBush: PEARL_BUSH,
+        napa: NAPA,
+        riverBed: RIVER_BED,
+        white: WHITE,
+      },
+      "theme-2": {
+        "bg-primary": theme2.bg.primary,
+        "bg-secondary": theme2.bg.secondary,
+        "bg-tertiary": theme2.bg.tertiary,
         ebonyClay: EBONY_CLAY,
         mirage: MIRAGE,
         lynch: LYNCH,
@@ -41,9 +114,10 @@ module.exports = {
         riverBed: RIVER_BED,
         white: WHITE,
       },
-      "theme-2": {
-        fiord: FIORD,
-        background: '#FFF',
+      "theme-3": {
+        "bg-primary": theme3.bg.primary,
+        "bg-secondary": theme3.bg.secondary,
+        "bg-tertiary": theme3.bg.tertiary,
         ebonyClay: EBONY_CLAY,
         mirage: MIRAGE,
         lynch: LYNCH,

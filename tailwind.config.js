@@ -1,3 +1,7 @@
+const { createThemes } = require('tw-colors');
+
+// Descriptive color variables
+
 // Background
 const FIORD = "#3A4764"
 const EBONY_CLAY = "#232C43"
@@ -14,6 +18,9 @@ const NAPA = "#B4A597"
 // Text
 const RIVER_BED = "#444B5A"
 const WHITE = "#FFF"
+
+// Functional color variables
+
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {

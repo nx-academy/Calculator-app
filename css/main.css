@@ -16,11 +16,11 @@
   }
 
   .key-primary {
-    @apply bg-pearlBush rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-3xl font-bold border-b-4 border-solid border-b-napa;
+    @apply bg-key-tertiary rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-3xl font-bold border-b-4 border-solid border-b-key-tertiary-sh;
   }
 
   .key-secondary {
-    @apply bg-lynch text-white rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-xl font-bold border-b-4 border-solid border-b-eastBay cursor-pointer;
+    @apply bg-key-primary text-white rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-xl font-bold border-b-4 border-solid border-b-key-primary-sh cursor-pointer;
   }
 
   .key-tertiary {
@@ -56,14 +56,14 @@
   }
 
   .tw-toggle-input[value="theme-1"]:checked ~ .tw-toggle-span {
-    @apply bg-persianRed left-[7px];
+    @apply bg-key-secondary left-[7px];
   }
 
   .tw-toggle-input[value="theme-2"]:checked ~ .tw-toggle-span {
-    @apply bg-persianRed left-[35px];
+    @apply bg-key-secondary left-[35px];
   }
 
   .tw-toggle-input[value="theme-3"]:checked ~ .tw-toggle-span {
-    @apply bg-persianRed left-[64px];
+    @apply bg-key-secondary left-[64px];
   }
 }

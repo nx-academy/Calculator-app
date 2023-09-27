@@ -16,15 +16,15 @@
   }
 
   .key-primary {
-    @apply bg-pearl-bush rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-3xl font-bold border-b-4 border-solid border-b-napa;
+    @apply bg-tertiary rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-3xl font-bold border-b-4 border-solid border-b-tertiary-dark;
   }
 
   .key-secondary {
-    @apply rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-xl font-bold border-b-4 border-solid cursor-pointer bg-lynch text-white border-b-east-bay;
+    @apply rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-xl font-bold border-b-4 border-solid cursor-pointer bg-primary-lighter text-white border-b-primary-light;
   }
 
   .key-tertiary {
-    @apply text-white border-b-4 border-solid bg-persian-red border-b-old-brick;
+    @apply text-white border-b-4 border-solid bg-secondary border-b-secondary-dark;
   }
 
   .key-lg {
@@ -32,7 +32,7 @@
   }
 
   .tw-toggle {
-    @apply inline-block px-2 py-1 rounded-xl relative bg-ebony-clay w-24 h-7;
+    @apply inline-block px-2 py-1 rounded-xl relative bg-primary-dark w-24 h-7;
   }
 
   .tw-toggle-label {
@@ -60,14 +60,14 @@
   }
 
   .tw-toggle-input[value="theme-1"]:checked ~ .tw-toggle-span {
-    @apply bg-persian-red left-[7px];
+    @apply bg-secondary left-[7px];
   }
 
   .tw-toggle-input[value="theme-2"]:checked ~ .tw-toggle-span {
-    @apply bg-persian-red left-[35px];
+    @apply bg-secondary left-[35px];
   }
 
   .tw-toggle-input[value="theme-3"]:checked ~ .tw-toggle-span {
-    @apply bg-persian-red left-[64px];
+    @apply bg-secondary left-[64px];
   }
 }

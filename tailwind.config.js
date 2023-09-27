@@ -20,23 +20,16 @@ const WHITE = "#FFF";
 
 // Functional color variables
 const theme1 = {
-  bg: {
-    primary: FIORD,
-    secondary: EBONY_CLAY,
-    tertiary: MIRAGE,
-  },
-  keys: {
-    primary: LYNCH,
-    primaryShadow: EAST_BAY,
-    secondary: PERSIAN_RED,
-    secondaryShadow: OLD_BRICK,
-    tertiary: PEARL_BUSH,
-    tertiaryShadow: NAPA,
-  },
-  text: {
-    primary: RIVER_BED,
-    secondary: WHITE,
-  },
+  primary: FIORD,
+  "primary-dark": EBONY_CLAY,
+  "primary-darker": MIRAGE,
+  "primary-light": EAST_BAY,
+  "primary-lighter": LYNCH,
+  secondary: PERSIAN_RED,
+  "secondary-dark": OLD_BRICK,
+  tertiary: PEARL_BUSH,
+  "tertiary-dark": NAPA,
+  
 };
 
 
@@ -47,29 +40,19 @@ module.exports = {
   plugins: [
     createThemes({
       "theme-1": {
-        fiord: FIORD,
-        "ebony-clay": EBONY_CLAY,
-        mirage: MIRAGE,
-        lynch: LYNCH,
-        "east-bay": EAST_BAY,
-        "persian-red": PERSIAN_RED,
-        "old-brick": OLD_BRICK,
+        primary: FIORD,
+        "primary-dark": EBONY_CLAY,
+        "primary-darker": MIRAGE,
+        "primary-light": EAST_BAY,
+        "primary-lighter": LYNCH,
+        secondary: PERSIAN_RED,
+        "secondary-dark": OLD_BRICK,
+        tertiary: PEARL_BUSH,
+        "tertiary-dark": NAPA,
         "pearl-bush": PEARL_BUSH,
         napa: NAPA,
         "river-bed": RIVER_BED,
         white: WHITE,
-        "bg-primary": theme1.bg.primary,
-        "bg-secondary": theme1.bg.secondary,
-        "bg-tertiary": theme1.bg.tertiary,
-        "key-primary": theme1.keys.primary,
-        "key-primary-sh": theme1.keys.primaryShadow,
-        "key-secondary": theme1.keys.secondary,
-        "key-secondary-sh": theme1.keys.secondaryShadow,
-        "key-tertiary": theme1.keys.tertiary,
-        "key-tertiary-sh": theme1.keys.tertiaryShadow,
-        "text-primary": theme1.text.primary,
-        "text-secondary": theme1.text.primary,
-        "text-tertiary": theme1.text.primary
       }
     })
   ],

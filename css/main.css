@@ -20,7 +20,7 @@
   }
 
   .key-secondary {
-    @apply bg-key-primary text-white rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-xl font-bold border-b-4 border-solid border-b-key-primary-sh cursor-pointer;
+    @apply bg-key-secondary text-white rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-xl font-bold border-b-4 border-solid border-b-key-secondary-sh cursor-pointer;
   }
 
   .key-tertiary {

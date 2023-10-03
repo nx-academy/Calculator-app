@@ -5,19 +5,19 @@ import { handleKeyTyping } from "./handleKeyTyping.js";
 let store = createStore();
 
 function handleTheme(): void {
-  const $themeCheckboxes = document.querySelectorAll('.tw-toggle-input')
+  const $themeCheckboxes = document.querySelectorAll(".tw-toggle-input");
 
-  $themeCheckboxes.forEach($checkbox => {
-    $checkbox.addEventListener('change', function(e) {
-      const value = (e.target as HTMLInputElement).value
-      const $html = document.querySelector('html')
-      
-      $html.classList.remove('theme-1')
-      $html.classList.remove('theme-2')
-      $html.classList.remove('theme-3')
-      $html.classList.add(value)
-    })
-  })
+  $themeCheckboxes.forEach(($checkbox) => {
+    $checkbox.addEventListener("change", function (e) {
+      const value = (e.target as HTMLInputElement).value;
+      const $html = document.querySelector("html");
+
+      $html.classList.remove("theme-1");
+      $html.classList.remove("theme-2");
+      $html.classList.remove("theme-3");
+      $html.classList.add(value);
+    });
+  });
 }
 
 function handleReset(): void {
@@ -81,7 +81,7 @@ function handleKeyOperator(): void {
 }
 
 function main(): void {
-  handleTheme()
+  handleTheme();
   handleReset();
   handleDeleteButton();
   handleKeyNumber();

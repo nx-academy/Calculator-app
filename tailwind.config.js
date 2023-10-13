@@ -35,6 +35,23 @@ const descriptiveTheme2 = {
   WHITE: "#FFF",
 };
 
+const descriptiveTheme3 = {
+  // Background
+  VIOLET: "#160628",
+  VIOLET_DARK: "hsl(268, 71%, 12%)",
+  // Keys
+  WINDSOR: "#58077D",
+  ELETRIC_VIOLET: "#BC15F4",
+  ROBIN_EGG_BLUE: "#00E0D1",
+  AQUAMARINE: "#6CF9F2",
+  GRAPE: "#341C4F",
+  SEANCE: "#871C9C",
+  // Text
+  BRIGHT_SUN: "#FFE53D",
+  SHARK: "#1B2428",
+  WHITE: "#FFF"
+};
+
 // Functional color variables
 const theme1 = {
   primary: descriptiveTheme1.FIORD,
@@ -61,7 +78,20 @@ const theme2 = {
   tertiary: descriptiveTheme2.WESTAR,
   "tertiary-dark": descriptiveTheme2.ZORBA,
   quarternary: descriptiveTheme2.ARMADILLO,
-  "quarternary-light": descriptiveTheme2.WHITE,
+  "quarternary-light": descriptiveTheme2.ARMADILLO,
+};
+const theme3 = {
+  primary: descriptiveTheme3.VIOLET,
+  "primary-dark": descriptiveTheme3.VIOLET_DARK,
+  "primary-darker": descriptiveTheme3.VIOLET_DARK,
+  "primary-light": descriptiveTheme3.ELETRIC_VIOLET,
+  "primary-lighter": descriptiveTheme3.WINDSOR,
+  secondary: descriptiveTheme3.ROBIN_EGG_BLUE,
+  "secondary-dark": descriptiveTheme3.AQUAMARINE,
+  tertiary: descriptiveTheme3.GRAPE,
+  "tertiary-dark": descriptiveTheme3.SEANCE,
+  quarternary: descriptiveTheme3.BRIGHT_SUN,
+  "quarternary-light": descriptiveTheme3.BRIGHT_SUN,
 };
 
 /** @type {import('tailwindcss').Config} */
@@ -72,6 +102,7 @@ module.exports = {
     createThemes({
       "theme-1": theme1,
       "theme-2": theme2,
+      "theme-3": theme3,
     }),
   ],
 };

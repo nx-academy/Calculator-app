@@ -20,11 +20,11 @@
   }
 
   .key-secondary {
-    @apply rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-xl font-bold border-b-4 border-solid cursor-pointer bg-primary-lighter text-white border-b-primary-light;
+    @apply rounded-sm lg:rounded-lg h-16 w-16 lg:w-auto flex justify-center items-center text-xl font-bold border-b-4 border-solid cursor-pointer bg-primary-lighter text-quarternary-light border-b-primary-light;
   }
 
   .key-tertiary {
-    @apply text-white border-b-4 border-solid bg-secondary border-b-secondary-dark;
+    @apply text-quarternary-light border-b-4 border-solid bg-secondary border-b-secondary-dark;
   }
 
   .key-lg {
@@ -36,7 +36,7 @@
   }
 
   .tw-toggle-label {
-    @apply text-center text-white z-10 px-2 py-1 absolute -top-7 cursor-pointer text-sm;
+    @apply text-center text-quarternary-light z-10 px-2 py-1 absolute -top-7 cursor-pointer text-sm;
   }
 
   .tw-toggle-label[for="theme-1"] {
@@ -56,7 +56,7 @@
   }
 
   .tw-toggle-span {
-    @apply h-6 w-6 bg-white absolute left-0 top-[2px] ease-in-out duration-300 rounded-full;
+    @apply h-6 w-6 bg-quarternary-light absolute left-0 top-[2px] ease-in-out duration-300 rounded-full;
   }
 
   .tw-toggle-input[value="theme-1"]:checked ~ .tw-toggle-span {

@@ -1,0 +1,33 @@
+name: Deploy project to GitHub Pages
+
+on:
+    push:
+        branches: ["main"]
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+jobs:
+    build_and_deploy:
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Set Up Node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
+                cache: 'npm'
+            - name: Install dependencies
+              run: yarn
+            - name: Run tests again app
+              run: yarn test
+            - name: Build the CSS
+              run: npx tailwindcss -i ./css/main.css -o ./dist/main.css
+            - name: Transpile TS to JS
+              run: tsc

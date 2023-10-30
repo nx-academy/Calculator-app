@@ -1,10 +1,13 @@
 {
   "scripts": {
-    "watch-css": "npx tailwindcss -i ./css/main.css -o ./dist/main.css --watch",
-    "watch-ts": "tsc --watch",
-    "watch-test": "vitest --watch",
+    "build-css": "npx tailwindcss -i ./css/main.css -o ./dist/main.css",
+    "build-ts": "tsc",
     "format": "prettier ./ts --write",
-    "serve": "http-server -p 3000"
+    "serve": "http-server -p 3000",
+    "test": "vitest --run",
+    "watch-css": "npx tailwindcss -i ./css/main.css -o ./dist/main.css --watch",
+    "watch-test": "vitest --watch",
+    "watch-ts": "tsc --watch"
   },
   "devDependencies": {
     "http-server": "^14.1.1",

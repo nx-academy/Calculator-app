@@ -31,6 +31,8 @@ jobs:
               run: npx tailwindcss -i ./css/main.css -o ./dist/main.css
             - name: Transpile TS to JS
               run: tsc
+            - name: Removing useless files and folders
+              run: rm -rf ./node_modules ./ts ./css
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v1
               with:

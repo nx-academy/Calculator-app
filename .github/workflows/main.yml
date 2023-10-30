@@ -31,6 +31,10 @@ jobs:
               run: npx tailwindcss -i ./css/main.css -o ./dist/main.css
             - name: Transpile TS to JS
               run: tsc
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v1
+              with:
+                path: '.'
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v1
